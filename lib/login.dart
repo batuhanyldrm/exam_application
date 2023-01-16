@@ -27,8 +27,17 @@ class MyHomePageState extends State<MyHomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              Container(
+                width: 100,
+                height: 100,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("assets/user.png"),
+                  ),
+                ),
+              ),
               Padding(
-                padding: const EdgeInsets.only(left: 80, right: 80),
+                padding: const EdgeInsets.only(left: 80, right: 80, top: 10),
                 child: TextFormField(
                   validator: (input) {
                     if (input!.isEmpty) {

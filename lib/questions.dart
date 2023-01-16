@@ -156,6 +156,8 @@ class QuizPage extends StatelessWidget {
         title: Text('Quiz'),
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Question(
             questions[currentQuestion]['question'] as String,
@@ -182,7 +184,7 @@ class Question extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(100),
+      margin: EdgeInsets.only(left: 50),
       child: Text(
         questionText,
         style: TextStyle(fontSize: 20),
@@ -240,6 +242,16 @@ class ResultPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Container(
+              width: 150,
+              height: 150,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(
+                      '${((100 / questions.length) * score).toInt() >= 50 ? "assets/passed.png" : "assets/failed.png"}'),
+                ),
+              ),
+            ),
             Text(
               'You scored ${((100 / questions.length) * score).toInt()}',
               style: TextStyle(fontSize: 20),
