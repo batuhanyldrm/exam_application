@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_application_final_project/categories.dart';
 import 'package:mobile_application_final_project/questions.dart';
 import 'package:mobile_application_final_project/error.dart';
 
@@ -92,7 +93,7 @@ class MyHomePageState extends State<MyHomePage> {
       widget.formKey.currentState!.save();
       if (widget.email == "batu@gmail.com" && widget.password == "batu52") {
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => Quiz()));
+            context, MaterialPageRoute(builder: (context) => Categories()));
       } else {
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => Error()));
