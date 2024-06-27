@@ -1,18 +1,161 @@
 import 'package:flutter/material.dart';
 
-class Quiz extends StatefulWidget {
-  const Quiz({super.key});
+class Categories extends StatefulWidget {
+  const Categories({super.key});
 
   @override
-  QuizState createState() => QuizState();
+  CategoriesState createState() => CategoriesState();
 }
 
-class QuizState extends State<Quiz> {
+class CategoriesState extends State<Categories> {
+  int stateCurrentCategory = -1; // No category selected initially
+  int stateScore = 0;
+
+  final List<Map<String, Object>> stateCategories = [
+    {
+      'id': 0,
+      'category': 'Travel',
+    },
+    {
+      'id': 1,
+      'category': 'Movies',
+    },
+    {
+      'id': 2,
+      'category': 'Education',
+    },
+    {
+      'id': 3,
+      'category': 'History',
+    },
+    {
+      'id': 4,
+      'category': 'Biology',
+    },
+    {
+      'id': 5,
+      'category': 'Sports',
+    },
+    {
+      'id': 6,
+      'category': 'News',
+    },
+    {
+      'id': 7,
+      'category': 'Literature',
+    },
+    {
+      'id': 8,
+      'category': 'Animals',
+    },
+    {
+      'id': 9,
+      'category': 'Jobs',
+    },
+  ];
+
+  void selectCategory(int categoryId) {
+    setState(() {
+      stateCurrentCategory = categoryId;
+    });
+  }
+
+  void resetQuiz() {
+    setState(() {
+      stateCurrentCategory = -1;
+      stateScore = 0;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (stateCurrentCategory == -1) {
+      return CategoriesPage(
+        categories: stateCategories,
+        selectCategory: selectCategory,
+      );
+    } else {
+      return QuizPage(
+        categoryId: stateCurrentCategory,
+        resetQuiz: resetQuiz,
+      );
+    }
+  }
+}
+
+class CategoriesPage extends StatelessWidget {
+  final List<Map<String, Object>> categories;
+  final Function(int) selectCategory;
+
+  CategoriesPage({required this.categories, required this.selectCategory});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Categories'),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: categories.map((category) {
+            return Category(
+              category['category'] as String,
+              () => selectCategory(category['id'] as int),
+            );
+          }).toList(),
+        ),
+      ),
+    );
+  }
+}
+
+class Category extends StatelessWidget {
+  final String answerText;
+  final Function onPress;
+
+  Category(this.answerText, this.onPress);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      margin: EdgeInsets.all(10),
+      child: OutlinedButton(
+        style: OutlinedButton.styleFrom(
+          shape: StadiumBorder(),
+          side: BorderSide(
+            width: 2,
+            color: Theme.of(context).colorScheme.primary,
+          ),
+        ),
+        child: Text(answerText),
+        onPressed: () {
+          onPress();
+        },
+      ),
+    );
+  }
+}
+
+class QuizPage extends StatefulWidget {
+  final int categoryId;
+  final VoidCallback resetQuiz;
+
+  QuizPage({required this.categoryId, required this.resetQuiz});
+
+  @override
+  QuizPageState createState() => QuizPageState();
+}
+
+class QuizPageState extends State<QuizPage> {
   int stateCurrentQuestion = 0;
   int stateScore = 0;
 
   final List<Map<String, Object>> stateQuestions = [
     {
+      'categoryId': 0,
       'question': '1. Who was the Ancient Greek God of the Sun?',
       'answers': [
         {'text': 'Apollo', 'score': 1},
@@ -22,6 +165,7 @@ class QuizState extends State<Quiz> {
       ],
     },
     {
+      'categoryId': 1,
       'question':
           '2. What character has both Robert Downey Jr. and Benedict Cumberbatch played?',
       'answers': [
@@ -32,6 +176,7 @@ class QuizState extends State<Quiz> {
       ],
     },
     {
+      'categoryId': 2,
       'question': '3. What is the capital of Turkey?',
       'answers': [
         {'text': 'Adana', 'score': 0},
@@ -40,78 +185,8 @@ class QuizState extends State<Quiz> {
         {'text': 'Ordu', 'score': 0},
       ],
     },
-    {
-      'question': '4. Which of the following is a country?',
-      'answers': [
-        {'text': 'Moscow', 'score': 0},
-        {'text': 'Nigeria', 'score': 1},
-        {'text': 'Jerusalem', 'score': 0},
-        {'text': 'Barcelona', 'score': 0},
-      ],
-    },
-    {
-      'question': '5. Which of the following is not a football player?',
-      'answers': [
-        {'text': 'Zimbabve', 'score': 1},
-        {'text': 'Pepe', 'score': 0},
-        {'text': 'Mbappe', 'score': 0},
-        {'text': 'Mahmut', 'score': 0},
-      ],
-    },
-    {
-      'question': '6. Which city is popular with apricot?',
-      'answers': [
-        {'text': 'Sivas', 'score': 0},
-        {'text': 'Amasya', 'score': 0},
-        {'text': 'Malatya', 'score': 1},
-        {'text': 'Ordu', 'score': 0},
-      ],
-    },
-    {
-      'question': '7. Which city is popular with Iskender kebab?',
-      'answers': [
-        {'text': 'Elazığ', 'score': 0},
-        {'text': 'Bursa', 'score': 1},
-        {'text': 'Gaziantep', 'score': 0},
-        {'text': 'Berlin', 'score': 0},
-      ],
-    },
-    {
-      'question':
-          '8. Which of the following is not the 7 Wonders of the World?',
-      'answers': [
-        {'text': 'Temple of Artemis in Ephesus', 'score': 0},
-        {'text': 'Halicarnassus Mausoleum.', 'score': 0},
-        {'text': 'Fairy Chimneys(Kapadokya)', 'score': 1},
-        {'text': 'Pyramids', 'score': 0},
-      ],
-    },
-    {
-      'question': '9. Name the longest river in the world?',
-      'answers': [
-        {'text': 'Irtysh River', 'score': 0},
-        {'text': 'The Nile', 'score': 1},
-        {'text': 'Mississippi River', 'score': 0},
-        {'text': 'Amazon River', 'score': 0},
-      ],
-    },
-    {
-      'question': '10. Kratos is the main character of what video game series?',
-      'answers': [
-        {'text': "Assassin's Creed", 'score': 0},
-        {'text': 'Hitman', 'score': 0},
-        {'text': 'Call of Duty', 'score': 0},
-        {'text': 'God of War', 'score': 1},
-      ],
-    },
+    // Additional questions for each category
   ];
-
-  void stateResetQuiz() {
-    setState(() {
-      stateCurrentQuestion = 0;
-      stateScore = 0;
-    });
-  }
 
   void stateAnswerQuestion(int score) {
     setState(() {
@@ -122,30 +197,31 @@ class QuizState extends State<Quiz> {
 
   @override
   Widget build(BuildContext context) {
-    if (stateCurrentQuestion < stateQuestions.length) {
-      return QuizPage(
-        questions: stateQuestions,
-        currentQuestion: stateCurrentQuestion,
+    final categoryQuestions = stateQuestions
+        .where((question) => question['categoryId'] == widget.categoryId)
+        .toList();
+
+    if (stateCurrentQuestion < categoryQuestions.length) {
+      return QuizQuestionPage(
+        question: categoryQuestions[stateCurrentQuestion],
         answerQuestion: stateAnswerQuestion,
       );
     } else {
       return ResultPage(
         score: stateScore,
-        questions: stateQuestions,
-        resetQuiz: stateResetQuiz,
+        questions: categoryQuestions,
+        resetQuiz: widget.resetQuiz,
       );
     }
   }
 }
 
-class QuizPage extends StatelessWidget {
-  final List<Map<String, Object>> questions;
-  final int currentQuestion;
-  final Function answerQuestion;
+class QuizQuestionPage extends StatelessWidget {
+  final Map<String, Object> question;
+  final Function(int) answerQuestion;
 
-  QuizPage({
-    required this.questions,
-    required this.currentQuestion,
+  QuizQuestionPage({
+    required this.question,
     required this.answerQuestion,
   });
 
@@ -160,14 +236,12 @@ class QuizPage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Question(
-            questions[currentQuestion]['question'] as String,
+            question['question'] as String,
           ),
-          ...(questions[currentQuestion]['answers']
-                  as List<Map<String, Object>>)
-              .map((answer) {
+          ...(question['answers'] as List<Map<String, Object>>).map((answer) {
             return Answer(
               answer['text'] as String,
-              () => answerQuestion(answer['score']),
+              () => answerQuestion(answer['score'] as int),
             );
           }).toList(),
         ],

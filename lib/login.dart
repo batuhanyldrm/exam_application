@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_application_final_project/categories.dart';
 import 'package:mobile_application_final_project/questions.dart';
 import 'package:mobile_application_final_project/error.dart';
 
