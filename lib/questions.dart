@@ -185,7 +185,118 @@ class QuizPageState extends State<QuizPage> {
         {'text': 'Ordu', 'score': 0},
       ],
     },
-    // Additional questions for each category
+    {
+      'categoryId': 3,
+      'question': '4. Which of the following is a country?',
+      'answers': [
+        {'text': 'Moscow', 'score': 0},
+        {'text': 'Nigeria', 'score': 1},
+        {'text': 'Jerusalem', 'score': 0},
+        {'text': 'Barcelona', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 4,
+      'question': '5. Which of the following is not a football player?',
+      'answers': [
+        {'text': 'Zimbabve', 'score': 1},
+        {'text': 'Pepe', 'score': 0},
+        {'text': 'Mbappe', 'score': 0},
+        {'text': 'Mahmut', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 5,
+      'question': '6. Which city is popular with apricot?',
+      'answers': [
+        {'text': 'Sivas', 'score': 0},
+        {'text': 'Amasya', 'score': 0},
+        {'text': 'Malatya', 'score': 1},
+        {'text': 'Ordu', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 6,
+      'question': '7. Which city is popular with Iskender kebab?',
+      'answers': [
+        {'text': 'Elazığ', 'score': 0},
+        {'text': 'Bursa', 'score': 1},
+        {'text': 'Gaziantep', 'score': 0},
+        {'text': 'Berlin', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 7,
+      'question':
+          '8. Which of the following is not the 7 Wonders of the World?',
+      'answers': [
+        {'text': 'Temple of Artemis in Ephesus', 'score': 0},
+        {'text': 'Halicarnassus Mausoleum.', 'score': 0},
+        {'text': 'Fairy Chimneys(Kapadokya)', 'score': 1},
+        {'text': 'Pyramids', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 8,
+      'question': '9. Name the longest river in the world?',
+      'answers': [
+        {'text': 'Irtysh River', 'score': 0},
+        {'text': 'The Nile', 'score': 1},
+        {'text': 'Mississippi River', 'score': 0},
+        {'text': 'Amazon River', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 9,
+      'question': '10. Kratos is the main character of what video game series?',
+      'answers': [
+        {'text': "Assassin's Creed", 'score': 0},
+        {'text': 'Hitman', 'score': 0},
+        {'text': 'Call of Duty', 'score': 0},
+        {'text': 'God of War', 'score': 1},
+      ],
+    },
+    {
+      'categoryId': 2,
+      'question': '2. The tree ______ by lightning.',
+      'answers': [
+        {'text': "was flashed", 'score': 0},
+        {'text': 'struck', 'score': 0},
+        {'text': 'was struck', 'score': 1},
+        {'text': 'flashed', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 2,
+      'question': "3. Where's the ______ post office, please?",
+      'answers': [
+        {'text': "most near", 'score': 0},
+        {'text': 'near', 'score': 0},
+        {'text': 'more near', 'score': 0},
+        {'text': 'nearest', 'score': 1},
+      ],
+    },
+    {
+      'categoryId': 2,
+      'question': '4. How long ______ English?',
+      'answers': [
+        {'text': "do you learn", 'score': 0},
+        {'text': 'are you learning', 'score': 0},
+        {'text': 'have you been learning', 'score': 1},
+        {'text': 'you learn', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 2,
+      'question':
+          '5. We would never have had the accident if you ______ so fast.',
+      'answers': [
+        {'text': "wouldn't been driving", 'score': 0},
+        {'text': "hadn't been driving", 'score': 1},
+        {'text': 'had driven', 'score': 0},
+        {'text': "wouldn't drive", 'score': 0},
+      ],
+    },
   ];
 
   void stateAnswerQuestion(int score) {
