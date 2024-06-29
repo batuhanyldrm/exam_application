@@ -26,6 +26,26 @@ class QuizPageState extends State<QuizPage> {
       ],
     },
     {
+      'categoryId': 0,
+      'question': '2. Which city is popular with apricot?',
+      'answers': [
+        {'text': 'Sivas', 'score': 0},
+        {'text': 'Amasya', 'score': 0},
+        {'text': 'Malatya', 'score': 1},
+        {'text': 'Ordu', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 0,
+      'question': '3. Which city is popular with Iskender kebab?',
+      'answers': [
+        {'text': 'Elazığ', 'score': 0},
+        {'text': 'Bursa', 'score': 1},
+        {'text': 'Gaziantep', 'score': 0},
+        {'text': 'Berlin', 'score': 0},
+      ],
+    },
+    {
       'categoryId': 1,
       'question':
           '2. What character has both Robert Downey Jr. and Benedict Cumberbatch played?',
@@ -38,22 +58,121 @@ class QuizPageState extends State<QuizPage> {
     },
     {
       'categoryId': 2,
-      'question': '3. What is the capital of Turkey?',
+      'question':
+          '1. Look at the picture and then choose the correct statement.',
+      'image': 'assets/santaClaus.jpg',
       'answers': [
-        {'text': 'Adana', 'score': 0},
-        {'text': 'Istanbul', 'score': 0},
-        {'text': 'Ankara', 'score': 1},
-        {'text': 'Ordu', 'score': 0},
+        {'text': 'Santa Claus is everywhere in the picture', 'score': 0},
+        {'text': 'Santa Claus is on the right of the picture', 'score': 1},
+        {'text': 'Santa Claus is in the middle of the picture', 'score': 0},
+        {'text': 'Santa Claus is on the left of the picture', 'score': 0},
       ],
     },
     {
       'categoryId': 3,
-      'question': '4. Which of the following is a country?',
+      'question': '1. Osmanlı İmparatorluğu kaç yıl boyunca hüküm sürmüştür?',
       'answers': [
-        {'text': 'Moscow', 'score': 0},
-        {'text': 'Nigeria', 'score': 1},
-        {'text': 'Jerusalem', 'score': 0},
-        {'text': 'Barcelona', 'score': 0},
+        {'text': '624', 'score': 1},
+        {'text': '670', 'score': 0},
+        {'text': '523', 'score': 0},
+        {'text': '615', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 3,
+      'question': '2. 2.Dünya Savaşı kaç sene sürmüştür?',
+      'answers': [
+        {'text': '3', 'score': 0},
+        {'text': '2', 'score': 0},
+        {'text': '5', 'score': 0},
+        {'text': '6', 'score': 1},
+      ],
+    },
+    {
+      'categoryId': 3,
+      'question': '3. Türklerde ilk düzenli orduyu kim kurmuştur?',
+      'answers': [
+        {'text': 'Mete Han', 'score': 1},
+        {'text': 'Orhan Bey', 'score': 0},
+        {'text': 'Teoman', 'score': 0},
+        {'text': 'Cengiz Han', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 3,
+      'question': '4. Ankara Savaşı kaç yılında gerçekleşmiştir?',
+      'answers': [
+        {'text': '1520', 'score': 0},
+        {'text': '1414', 'score': 0},
+        {'text': '1402', 'score': 1},
+        {'text': '1398', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 3,
+      'question':
+          '5. Büyük Selçuklu Devleti hangi savaş sonucunda kurulmuştur?',
+      'answers': [
+        {'text': 'Dandanakan', 'score': 1},
+        {'text': 'Ankara', 'score': 0},
+        {'text': 'Sazlıdere', 'score': 0},
+        {'text': 'Çirmen', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 3,
+      'question':
+          "6. 23 Nisan 1920'de Türkiye Büyük Millet Meclisi'nin açılmasıyla hangisinin görevi sona ermiştir?",
+      'answers': [
+        {'text': 'İstiklal Mahkemeleri', 'score': 0},
+        {'text': 'Kuvayımilliye', 'score': 0},
+        {'text': 'Temsil heyeti', 'score': 1},
+        {'text': 'Cemiyetler', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 3,
+      'question':
+          '7. Mondros Ateşkes Antlaşması sonrasında İngilizler tarafından işgal edilen ilk Osmanlı toprağı hangisidir?',
+      'answers': [
+        {'text': 'Batum', 'score': 0},
+        {'text': 'Antalya', 'score': 0},
+        {'text': 'Musul', 'score': 1},
+        {'text': 'Samsun', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 3,
+      'question': '8. Mondros Ateşkes Antlaşması hangi yılda imzalanmıştır?',
+      'image': 'assets/mondros.webp',
+      'answers': [
+        {'text': '1919', 'score': 0},
+        {'text': '1915', 'score': 0},
+        {'text': '1918', 'score': 1},
+        {'text': '1923', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 3,
+      'question':
+          "9. Osmanlı Dönemi'nde hangi padişah yeniçeriler tarafından boğularak öldürülmüştür?",
+      'answers': [
+        {'text': 'Genç Osman', 'score': 1},
+        {'text': 'Sarı Selim', 'score': 0},
+        {'text': 'IV.Mehmet', 'score': 0},
+        {'text': 'Fatih Sultan Mehmet', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 3,
+      'question':
+          '10. Malazgirt Meydan Muharebesi Selçuklular ile hangi devlet arasında gerçekleşmişitir?',
+      'image': 'assets/mondros.webp',
+      'answers': [
+        {'text': 'Peçenekler', 'score': 0},
+        {'text': 'Yunan', 'score': 0},
+        {'text': 'Karahitaylar', 'score': 0},
+        {'text': 'Bizans', 'score': 1},
       ],
     },
     {
@@ -68,12 +187,111 @@ class QuizPageState extends State<QuizPage> {
     },
     {
       'categoryId': 5,
-      'question': '6. Which city is popular with apricot?',
+      'question': "1. 2018 Dünya Kupası'nı hangi ülke kazandı?",
+      'image': 'assets/worldCup.jpg',
       'answers': [
-        {'text': 'Sivas', 'score': 0},
-        {'text': 'Amasya', 'score': 0},
-        {'text': 'Malatya', 'score': 1},
-        {'text': 'Ordu', 'score': 0},
+        {'text': 'Almanya', 'score': 0},
+        {'text': 'Brazilya', 'score': 0},
+        {'text': 'Fransa', 'score': 1},
+        {'text': 'Arjantin', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 5,
+      'question': '2. Hangi spor "sporun kralı" olarak kabul edilir?',
+      'answers': [
+        {'text': 'Basketbol', 'score': 0},
+        {'text': 'Futbol', 'score': 1},
+        {'text': 'Voleybol', 'score': 0},
+        {'text': 'Tenis', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 5,
+      'question': "3. 1946'da ilk NBA maçını hangi takım kazandı?",
+      'answers': [
+        {'text': 'New York Knicks', 'score': 1},
+        {'text': 'Los Angeles Lakers', 'score': 0},
+        {'text': 'Philadelphia 76ers', 'score': 0},
+        {'text': 'Brooklyn Nets', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 5,
+      'question': "4. Bir beyzbol takımında kaç oyuncu bulunur?",
+      'image': 'assets/beyzbol.webp',
+      'answers': [
+        {'text': '6', 'score': 0},
+        {'text': '4', 'score': 0},
+        {'text': '9', 'score': 1},
+        {'text': '7', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 5,
+      'question':
+          "5. Cep Herkülü olarak da tanınan Türk haltercimizin adı nedir?",
+      'image': 'assets/halter.webp',
+      'answers': [
+        {'text': 'Nuray Güngör', 'score': 0},
+        {'text': 'Naim Süleymanoğlu', 'score': 1},
+        {'text': 'Erol Bilgin', 'score': 0},
+        {'text': 'Sedat Artuç', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 5,
+      'question':
+          "6. Olimpiyat halkalarında kırmızı renk hangisini temsil eder?",
+      'image': 'assets/olimpiyat.webp',
+      'answers': [
+        {'text': 'Afrika', 'score': 0},
+        {'text': 'Avrupa', 'score': 0},
+        {'text': 'Asya', 'score': 0},
+        {'text': 'Amerika', 'score': 1},
+      ],
+    },
+    {
+      'categoryId': 5,
+      'question': "7. Dünya Kupası'nı ilk kazanan ülke hangisidir?",
+      'answers': [
+        {'text': 'Almanya', 'score': 0},
+        {'text': 'Uruguay', 'score': 1},
+        {'text': 'Arjantin', 'score': 0},
+        {'text': 'Türkiye', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 5,
+      'question': "8. Hangisi masa tenisi ile ilgili bir terim değildir?",
+      /* 'image': 'assets/tenis.webm', */
+      'answers': [
+        {'text': 'Servis', 'score': 0},
+        {'text': 'Forehand', 'score': 0},
+        {'text': 'Ribaund', 'score': 1},
+        {'text': 'Backhand', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 5,
+      'question': "9. 400 metre engelli koşuda kaç adet engel bulunur?",
+      'answers': [
+        {'text': '16', 'score': 0},
+        {'text': '10', 'score': 1},
+        {'text': '20', 'score': 0},
+        {'text': '12', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 5,
+      'question':
+          "10. Basketbolda bir sporcu topu sektirmeden topla beraber en fazla kaç adım atabilir?",
+      /* 'image': 'assets/basket.webm', */
+      'answers': [
+        {'text': '3', 'score': 0},
+        {'text': '1', 'score': 0},
+        {'text': 'Atamaz', 'score': 0},
+        {'text': '2', 'score': 1},
       ],
     },
     {
@@ -158,6 +376,42 @@ class QuizPageState extends State<QuizPage> {
         {'text': "wouldn't drive", 'score': 0},
       ],
     },
+    {
+      'categoryId': 2,
+      'question':
+          '6. Look at the picture and then choose the correct statement.',
+      'image': 'assets/englishGiving.jpg',
+      'answers': [
+        {'text': "The boy is wearing glasses", 'score': 0},
+        {'text': "The man is giving something to the boy", 'score': 1},
+        {'text': 'The man is thanking the boy', 'score': 0},
+        {'text': "The boy is giving something to the man", 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 2,
+      'question':
+          '7. Look at the picture and then choose the correct statement.',
+      'image': 'assets/pumpkin.jpg',
+      'answers': [
+        {'text': "It is a cold and rainy day", 'score': 0},
+        {'text': "They are standing in front of a large orange", 'score': 0},
+        {'text': 'They are standing in front of a large pumpkin', 'score': 1},
+        {'text': "There are six girls in the picture", 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 2,
+      'question':
+          '7. Look at the picture and then choose the correct statement.',
+      'image': 'assets/copOfLove.jpg',
+      'answers': [
+        {'text': "The shop closes at 7pm", 'score': 1},
+        {'text': "The shop closes at 7am", 'score': 0},
+        {'text': 'The shop closes at 19:00pm', 'score': 0},
+        {'text': "The shop closes at 9pm", 'score': 0},
+      ],
+    },
   ];
 
   void stateAnswerQuestion(int score) {
@@ -207,6 +461,11 @@ class QuizQuestionPage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
+          if (question.containsKey('image'))
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 10),
+              child: Image.asset(question['image'] as String),
+            ),
           Question(
             question['question'] as String,
           ),

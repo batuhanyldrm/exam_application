@@ -69,6 +69,17 @@ flutter:
       - assets/unsuccessful.png
       - assets/passed.png
       - assets/failed.png
+      - assets/santaClaus.jpg
+      - assets/englishGiving.jpg
+      - assets/pumpkin.jpg
+      - assets/copOfLove.jpg
+      - assets/mondros.webp
+      - assets/beyzbol.webp
+      - assets/halter.webp
+      - assets/tenis.webm
+      - assets/basket.webm
+      - assets/olimpiyat.webp
+      - assets/worldCup.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
