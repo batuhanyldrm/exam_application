@@ -1,55 +1,84 @@
 import 'package:flutter/material.dart';
+import 'questions.dart';
 
 class Categories extends StatefulWidget {
   const Categories({super.key});
 
+  @override
   CategoriesState createState() => CategoriesState();
 }
 
 class CategoriesState extends State<Categories> {
-  int stateCurrentQuestion = 0;
+  int stateCurrentCategory = -1; // No category selected initially
   int stateScore = 0;
 
   final List<Map<String, Object>> stateCategories = [
     {
-      'categories': [
-        {'category': 'Travel'},
-        {'category': 'Movies'},
-        {'category': 'Education'},
-        {'category': 'History'},
-        {'category': 'Biyology'},
-        {'category': 'Sports'},
-        {'category': 'News'},
-        {'category': 'Literature'},
-        {'category': 'Animals'},
-        {'category': 'Jobs'},
-      ]
+      'id': 0,
+      'category': 'Travel',
+    },
+    {
+      'id': 1,
+      'category': 'Movies',
+    },
+    {
+      'id': 2,
+      'category': 'Education',
+    },
+    {
+      'id': 3,
+      'category': 'History',
+    },
+    {
+      'id': 4,
+      'category': 'Biology',
+    },
+    {
+      'id': 5,
+      'category': 'Sports',
+    },
+    {
+      'id': 6,
+      'category': 'News',
+    },
+    {
+      'id': 7,
+      'category': 'Literature',
+    },
+    {
+      'id': 8,
+      'category': 'Animals',
+    },
+    {
+      'id': 9,
+      'category': 'Jobs',
     },
   ];
 
-  void answerQuestion() {
+  void selectCategory(int categoryId) {
     setState(() {
-      stateCurrentQuestion++;
-      stateScore++;
+      stateCurrentCategory = categoryId;
+    });
+  }
+
+  void resetQuiz() {
+    setState(() {
+      stateCurrentCategory = -1;
+      stateScore = 0;
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    if (stateCurrentQuestion < stateCategories.length) {
+    if (stateCurrentCategory == -1) {
       return CategoriesPage(
         categories: stateCategories,
-        answerQuestion: answerQuestion,
+        selectCategory: selectCategory,
       );
     } else {
-      return Scaffold(
-        appBar: AppBar(
-          title: Text('Categories Complete'),
-        ),
-        body: Center(
-          child:
-              Text('You completed the Categories! Your score is: $stateScore'),
-        ),
+      return QuizPage(
+        categoryId: stateCurrentCategory,
+        resetQuiz: resetQuiz,
       );
     }
   }
@@ -57,9 +86,9 @@ class CategoriesState extends State<Categories> {
 
 class CategoriesPage extends StatelessWidget {
   final List<Map<String, Object>> categories;
-  final Function answerQuestion;
+  final Function(int) selectCategory;
 
-  CategoriesPage({required this.categories, required this.answerQuestion});
+  CategoriesPage({required this.categories, required this.selectCategory});
 
   @override
   Widget build(BuildContext context) {
@@ -71,15 +100,12 @@ class CategoriesPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            ...(categories[0]['categories'] as List<Map<String, Object>>)
-                .map((category) {
-              return Category(
-                category['category'] as String, // Burada cast işlemi yapıldı
-                answerQuestion,
-              );
-            }).toList(),
-          ],
+          children: categories.map((category) {
+            return Category(
+              category['category'] as String,
+              () => selectCategory(category['id'] as int),
+            );
+          }).toList(),
         ),
       ),
     );
