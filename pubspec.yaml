@@ -76,8 +76,8 @@ flutter:
       - assets/mondros.webp
       - assets/beyzbol.webp
       - assets/halter.webp
-      - assets/tenis.webm
-      - assets/basket.webm
+      - assets/tenis.gif
+      - assets/basket.gif
       - assets/olimpiyat.webp
       - assets/worldCup.jpg
 

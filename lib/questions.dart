@@ -264,7 +264,7 @@ class QuizPageState extends State<QuizPage> {
     {
       'categoryId': 5,
       'question': "8. Hangisi masa tenisi ile ilgili bir terim değildir?",
-      /* 'image': 'assets/tenis.webm', */
+      'image': 'assets/tenis.gif',
       'answers': [
         {'text': 'Servis', 'score': 0},
         {'text': 'Forehand', 'score': 0},
@@ -286,7 +286,7 @@ class QuizPageState extends State<QuizPage> {
       'categoryId': 5,
       'question':
           "10. Basketbolda bir sporcu topu sektirmeden topla beraber en fazla kaç adım atabilir?",
-      /* 'image': 'assets/basket.webm', */
+      'image': 'assets/basket.gif',
       'answers': [
         {'text': '3', 'score': 0},
         {'text': '1', 'score': 0},
