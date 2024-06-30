@@ -489,10 +489,11 @@ class Question extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 50),
+      alignment: Alignment.centerLeft,
+      padding: const EdgeInsets.symmetric(horizontal: 10),
       child: Text(
         questionText,
-        style: TextStyle(fontSize: 20),
+        style: const TextStyle(fontSize: 17),
       ),
     );
   }
@@ -506,21 +507,23 @@ class Answer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 200.0,
-      margin: EdgeInsets.all(10),
-      child: OutlinedButton(
-        style: OutlinedButton.styleFrom(
-          shape: StadiumBorder(),
-          side: BorderSide(
-            width: 2,
-            color: Theme.of(context).colorScheme.primary,
+    return Center(
+      child: Container(
+        width: 200.0,
+        margin: const EdgeInsets.all(10),
+        child: OutlinedButton(
+          style: OutlinedButton.styleFrom(
+            shape: const StadiumBorder(),
+            side: BorderSide(
+              width: 2,
+              color: Theme.of(context).colorScheme.primary,
+            ),
           ),
+          child: Text(answerText),
+          onPressed: () {
+            onPress();
+          },
         ),
-        child: Text(answerText),
-        onPressed: () {
-          onPress();
-        },
       ),
     );
   }
@@ -541,7 +544,7 @@ class ResultPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Quiz'),
+        title: const Text('Quiz'),
       ),
       body: Center(
         child: Column(
@@ -553,18 +556,20 @@ class ResultPage extends StatelessWidget {
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
-                      '${((100 / questions.length) * score).toInt() >= 50 ? "assets/passed.png" : "assets/failed.png"}'),
+                      ((100 / questions.length) * score).toInt() >= 50
+                          ? "assets/passed.png"
+                          : "assets/failed.png"),
                 ),
               ),
             ),
             Text(
               'You scored ${((100 / questions.length) * score).toInt()}',
-              style: TextStyle(fontSize: 20),
+              style: const TextStyle(fontSize: 20),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
-              child: Text('Reset quiz'),
               onPressed: resetQuiz,
+              child: const Text('Reset quiz'),
             ),
           ],
         ),
