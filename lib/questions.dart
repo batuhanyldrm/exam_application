@@ -69,6 +69,83 @@ class QuizPageState extends State<QuizPage> {
       ],
     },
     {
+      'categoryId': 2,
+      'question': '2. The tree ______ by lightning.',
+      'answers': [
+        {'text': "was flashed", 'score': 0},
+        {'text': 'struck', 'score': 0},
+        {'text': 'was struck', 'score': 1},
+        {'text': 'flashed', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 2,
+      'question': "3. Where's the ______ post office, please?",
+      'answers': [
+        {'text': "most near", 'score': 0},
+        {'text': 'near', 'score': 0},
+        {'text': 'more near', 'score': 0},
+        {'text': 'nearest', 'score': 1},
+      ],
+    },
+    {
+      'categoryId': 2,
+      'question': '4. How long ______ English?',
+      'answers': [
+        {'text': "do you learn", 'score': 0},
+        {'text': 'are you learning', 'score': 0},
+        {'text': 'have you been learning', 'score': 1},
+        {'text': 'you learn', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 2,
+      'question':
+          '5. We would never have had the accident if you ______ so fast.',
+      'answers': [
+        {'text': "wouldn't been driving", 'score': 0},
+        {'text': "hadn't been driving", 'score': 1},
+        {'text': 'had driven', 'score': 0},
+        {'text': "wouldn't drive", 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 2,
+      'question':
+          '6. Look at the picture and then choose the correct statement.',
+      'image': 'assets/englishGiving.jpg',
+      'answers': [
+        {'text': "The boy is wearing glasses", 'score': 0},
+        {'text': "The man is giving something to the boy", 'score': 1},
+        {'text': 'The man is thanking the boy', 'score': 0},
+        {'text': "The boy is giving something to the man", 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 2,
+      'question':
+          '7. Look at the picture and then choose the correct statement.',
+      'image': 'assets/pumpkin.jpg',
+      'answers': [
+        {'text': "It is a cold and rainy day", 'score': 0},
+        {'text': "They are standing in front of a large orange", 'score': 0},
+        {'text': 'They are standing in front of a large pumpkin', 'score': 1},
+        {'text': "There are six girls in the picture", 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 2,
+      'question':
+          '8. Look at the picture and then choose the correct statement.',
+      'image': 'assets/copOfLove.jpg',
+      'answers': [
+        {'text': "The shop closes at 7pm", 'score': 1},
+        {'text': "The shop closes at 7am", 'score': 0},
+        {'text': 'The shop closes at 19:00pm', 'score': 0},
+        {'text': "The shop closes at 9pm", 'score': 0},
+      ],
+    },
+    {
       'categoryId': 3,
       'question': '1. Osmanlı İmparatorluğu kaç yıl boyunca hüküm sürmüştür?',
       'answers': [
@@ -167,7 +244,6 @@ class QuizPageState extends State<QuizPage> {
       'categoryId': 3,
       'question':
           '10. Malazgirt Meydan Muharebesi Selçuklular ile hangi devlet arasında gerçekleşmişitir?',
-      'image': 'assets/mondros.webp',
       'answers': [
         {'text': 'Peçenekler', 'score': 0},
         {'text': 'Yunan', 'score': 0},
@@ -296,12 +372,109 @@ class QuizPageState extends State<QuizPage> {
     },
     {
       'categoryId': 6,
-      'question': '7. Which city is popular with Iskender kebab?',
+      'question': "1. Allahuekber dağları Türkiye'nin hangi bölgesindedir?",
+      'image': 'assets/allahuekber.webp',
       'answers': [
-        {'text': 'Elazığ', 'score': 0},
-        {'text': 'Bursa', 'score': 1},
-        {'text': 'Gaziantep', 'score': 0},
-        {'text': 'Berlin', 'score': 0},
+        {'text': 'Güneydoğu Anadolu Bölgesi', 'score': 0},
+        {'text': 'Akdeniz Bölgesi', 'score': 0},
+        {'text': 'Doğu Anadolu Bölgesi', 'score': 1},
+        {'text': 'Karadeniz Bölgesi', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 6,
+      'question': "2. Tuz Gölünün hangi illerimizde kıyısı yoktur?",
+      'answers': [
+        {'text': 'Niğde', 'score': 1},
+        {'text': 'Ankara', 'score': 0},
+        {'text': 'Konya', 'score': 0},
+        {'text': 'Aksaray', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 6,
+      'question': "3. Alüvyon hangisiyle alakalı bir terimdir?",
+      'answers': [
+        {'text': 'Dağ', 'score': 0},
+        {'text': 'Hava', 'score': 0},
+        {'text': 'Deprem', 'score': 0},
+        {'text': 'Akarsu', 'score': 1},
+      ],
+    },
+    {
+      'categoryId': 6,
+      'question': "4. Hangi iki ilimiz komşudur?",
+      'image': 'assets/harita.webp',
+      'answers': [
+        {'text': 'Çorum - Ankara', 'score': 0},
+        {'text': 'Rize - Erzurum', 'score': 1},
+        {'text': 'İstanbul - Yalova', 'score': 0},
+        {'text': 'Kırıkkale - Nevşehir', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 6,
+      'question':
+          "5. Maki daha çok hangi bölgemizde görülen bir bitki örtüsüdür?",
+      'image': 'assets/maki.webp',
+      'answers': [
+        {'text': 'İç Anadolu Bölgesi', 'score': 0},
+        {'text': 'Marmara Bölgesi', 'score': 0},
+        {'text': 'Akdeniz Bölgesi', 'score': 1},
+        {'text': 'Karadeniz Bölgesi', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 6,
+      'question': "6. Aşağıdaki ülkelerden hangisi Avrupa'dadır?",
+      'answers': [
+        {'text': 'Yeni Zelanda', 'score': 0},
+        {'text': 'Avusturya', 'score': 1},
+        {'text': 'Ermenistan', 'score': 0},
+        {'text': 'Avustralya', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 6,
+      'question': "7. Aşağıdaki şehirlerden hangisi bir başkenttir?",
+      'answers': [
+        {'text': 'Abu Dabi', 'score': 1},
+        {'text': 'New York', 'score': 0},
+        {'text': 'Cenevre', 'score': 0},
+        {'text': 'Liverpool', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 6,
+      'question': "8. Hangi iki ülke birbiriyle komşudur?",
+      'image': 'assets/dünya.webp',
+      'answers': [
+        {'text': 'Danimarka - Norveç', 'score': 0},
+        {'text': 'Brezilya - Şili', 'score': 0},
+        {'text': 'Mısır - İsrail', 'score': 1},
+        {'text': 'Fas - Tunus', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 6,
+      'question': "9. Hangi nehir Güney Amerika'dadır?",
+      'image': 'assets/river.gif',
+      'answers': [
+        {'text': 'Amazon', 'score': 1},
+        {'text': 'Nil', 'score': 0},
+        {'text': 'Mississippi', 'score': 0},
+        {'text': 'Obi', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 6,
+      'question': "10. Everest Dağı hangi iki ülkenin sınırı üstünde yer alır?",
+      'image': 'assets/everest.gif',
+      'answers': [
+        {'text': 'Çin - Hindistan', 'score': 0},
+        {'text': 'Çin - Nepal', 'score': 1},
+        {'text': 'Hindistan - Afganistan', 'score': 0},
+        {'text': 'Hindistan - Nepal', 'score': 0},
       ],
     },
     {
@@ -317,12 +490,111 @@ class QuizPageState extends State<QuizPage> {
     },
     {
       'categoryId': 8,
-      'question': '9. Name the longest river in the world?',
+      'question':
+          '1. Uyurken birbirlerinden ayrı düşmemek için el ele tutuşan hayvan hangisidir?',
       'answers': [
-        {'text': 'Irtysh River', 'score': 0},
-        {'text': 'The Nile', 'score': 1},
-        {'text': 'Mississippi River', 'score': 0},
-        {'text': 'Amazon River', 'score': 0},
+        {'text': 'Penguen', 'score': 0},
+        {'text': 'Su samuru', 'score': 1},
+        {'text': 'Panda', 'score': 0},
+        {'text': 'Ayı', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 8,
+      'question':
+          '2. Toprağın altına sakladıkları meşe palamutlarını nereye koyduklarını unuttukları için her yıl binlerce ağacın yetişmesine neden olan hayvan hangisidir?',
+      'answers': [
+        {'text': 'Sincap', 'score': 1},
+        {'text': 'Kunduz', 'score': 0},
+        {'text': 'Tavşan', 'score': 0},
+        {'text': 'Fare', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 8,
+      'question':
+          '3. Hangi hayvanların burun izleri, insanların parmak izleri gibi eşsizdir ve birbirlerinin kimliklerini bu şekilde tespit ederler?',
+      'answers': [
+        {'text': 'At', 'score': 0},
+        {'text': 'Kaplumbağa', 'score': 0},
+        {'text': 'Kedi', 'score': 0},
+        {'text': 'Köpek', 'score': 1},
+      ],
+    },
+    {
+      'categoryId': 8,
+      'question': '4. Hangi hayvanın tat alma duyuları ayaklarındadır?',
+      'answers': [
+        {'text': 'Sinek', 'score': 0},
+        {'text': 'Uğur böceği', 'score': 0},
+        {'text': 'Kelebek', 'score': 1},
+        {'text': 'Arı', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 8,
+      'question':
+          '5. 805 km uzaktan algılanabilen alçak frekansta ses dalgaları üreten en gürültücü memeli hangisidir?',
+      'answers': [
+        {'text': 'Mavi balina', 'score': 1},
+        {'text': 'Fil', 'score': 0},
+        {'text': 'Goril', 'score': 0},
+        {'text': 'Aslan', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 8,
+      'question': '6. Görseldeki hayvan hangisidir?',
+      'image': 'assets/glaucus.jpg',
+      'answers': [
+        {'text': 'Glaucus Atlanticus', 'score': 1},
+        {'text': 'Chrysopelea', 'score': 0},
+        {'text': 'Blobfish', 'score': 0},
+        {'text': 'Enypniastes', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 8,
+      'question': '7. Dünyanın en küçük memeli hayvanı hangisidir?',
+      'answers': [
+        {'text': 'Pigme Arap tavşanı', 'score': 0},
+        {'text': 'Cüce böcekçil', 'score': 0},
+        {'text': 'Keseli pigme sıçanı', 'score': 0},
+        {'text': 'Yabanarısı yarasası', 'score': 1},
+      ],
+    },
+    {
+      'categoryId': 8,
+      'question':
+          '8. Hangisi rejenerasyon ile kendini yenileyebilen bir hayvan değildir?',
+      'image': 'assets/yenileme.webp',
+      'answers': [
+        {'text': 'Deniz yıldızı', 'score': 0},
+        {'text': 'Deniz atı', 'score': 1},
+        {'text': 'Toprak solucanı', 'score': 0},
+        {'text': 'Kertenkele', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 8,
+      'question': '9. Hangi hayvan türü otçuldur?',
+      'image': 'assets/hayvanlar.jpg',
+      'answers': [
+        {'text': 'Geyik', 'score': 1},
+        {'text': 'Fare', 'score': 0},
+        {'text': 'Tilki', 'score': 0},
+        {'text': 'Maymun', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 8,
+      'question': '10. Videoda ki hayvan hangisidir?',
+      'image': 'assets/okapi.gif',
+      'answers': [
+        {'text': 'Pyura Chilensis', 'score': 0},
+        {'text': 'Gerenuk', 'score': 0},
+        {'text': 'Okapi', 'score': 1},
+        {'text': 'Patagonian Mara', 'score': 0},
       ],
     },
     {
@@ -333,83 +605,6 @@ class QuizPageState extends State<QuizPage> {
         {'text': 'Hitman', 'score': 0},
         {'text': 'Call of Duty', 'score': 0},
         {'text': 'God of War', 'score': 1},
-      ],
-    },
-    {
-      'categoryId': 2,
-      'question': '2. The tree ______ by lightning.',
-      'answers': [
-        {'text': "was flashed", 'score': 0},
-        {'text': 'struck', 'score': 0},
-        {'text': 'was struck', 'score': 1},
-        {'text': 'flashed', 'score': 0},
-      ],
-    },
-    {
-      'categoryId': 2,
-      'question': "3. Where's the ______ post office, please?",
-      'answers': [
-        {'text': "most near", 'score': 0},
-        {'text': 'near', 'score': 0},
-        {'text': 'more near', 'score': 0},
-        {'text': 'nearest', 'score': 1},
-      ],
-    },
-    {
-      'categoryId': 2,
-      'question': '4. How long ______ English?',
-      'answers': [
-        {'text': "do you learn", 'score': 0},
-        {'text': 'are you learning', 'score': 0},
-        {'text': 'have you been learning', 'score': 1},
-        {'text': 'you learn', 'score': 0},
-      ],
-    },
-    {
-      'categoryId': 2,
-      'question':
-          '5. We would never have had the accident if you ______ so fast.',
-      'answers': [
-        {'text': "wouldn't been driving", 'score': 0},
-        {'text': "hadn't been driving", 'score': 1},
-        {'text': 'had driven', 'score': 0},
-        {'text': "wouldn't drive", 'score': 0},
-      ],
-    },
-    {
-      'categoryId': 2,
-      'question':
-          '6. Look at the picture and then choose the correct statement.',
-      'image': 'assets/englishGiving.jpg',
-      'answers': [
-        {'text': "The boy is wearing glasses", 'score': 0},
-        {'text': "The man is giving something to the boy", 'score': 1},
-        {'text': 'The man is thanking the boy', 'score': 0},
-        {'text': "The boy is giving something to the man", 'score': 0},
-      ],
-    },
-    {
-      'categoryId': 2,
-      'question':
-          '7. Look at the picture and then choose the correct statement.',
-      'image': 'assets/pumpkin.jpg',
-      'answers': [
-        {'text': "It is a cold and rainy day", 'score': 0},
-        {'text': "They are standing in front of a large orange", 'score': 0},
-        {'text': 'They are standing in front of a large pumpkin', 'score': 1},
-        {'text': "There are six girls in the picture", 'score': 0},
-      ],
-    },
-    {
-      'categoryId': 2,
-      'question':
-          '7. Look at the picture and then choose the correct statement.',
-      'image': 'assets/copOfLove.jpg',
-      'answers': [
-        {'text': "The shop closes at 7pm", 'score': 1},
-        {'text': "The shop closes at 7am", 'score': 0},
-        {'text': 'The shop closes at 19:00pm', 'score': 0},
-        {'text': "The shop closes at 9pm", 'score': 0},
       ],
     },
   ];

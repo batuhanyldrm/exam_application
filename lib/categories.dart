@@ -39,7 +39,7 @@ class CategoriesState extends State<Categories> {
     },
     {
       'id': 6,
-      'category': 'News',
+      'category': 'geography',
     },
     {
       'id': 7,

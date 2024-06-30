@@ -76,10 +76,20 @@ flutter:
       - assets/mondros.webp
       - assets/beyzbol.webp
       - assets/halter.webp
+      - assets/yenileme.webp
+      - assets/allahuekber.webp
+      - assets/harita.webp
+      - assets/maki.webp
+      - assets/dünya.webp
       - assets/tenis.gif
       - assets/basket.gif
+      - assets/okapi.gif
+      - assets/river.gif
+      - assets/everest.gif
       - assets/olimpiyat.webp
       - assets/worldCup.jpg
+      - assets/glaucus.jpg
+      - assets/hayvanlar.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
