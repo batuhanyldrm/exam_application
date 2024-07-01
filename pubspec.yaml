@@ -81,6 +81,10 @@ flutter:
       - assets/harita.webp
       - assets/maki.webp
       - assets/dünya.webp
+      - assets/history.webp
+      - assets/movies.webp
+      - assets/jobs.webp
+      - assets/sport.webp
       - assets/tenis.gif
       - assets/basket.gif
       - assets/okapi.gif
@@ -90,6 +94,12 @@ flutter:
       - assets/worldCup.jpg
       - assets/glaucus.jpg
       - assets/hayvanlar.jpg
+      - assets/travel.jpg
+      - assets/education.jpg
+      - assets/literature.jpg
+      - assets/geography.jpg
+      - assets/biology.jpg
+      - assets/animals.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
