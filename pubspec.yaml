@@ -85,9 +85,19 @@ flutter:
       - assets/movies.webp
       - assets/jobs.webp
       - assets/sport.webp
+      - assets/character.webp
+      - assets/rocky.webp
+      - assets/award.webp
+      - assets/robertbenedict.jpg
       - assets/tenis.gif
       - assets/basket.gif
       - assets/okapi.gif
+      - assets/brad.gif
+      - assets/tylerDurden.gif
+      - assets/deadpool.gif
+      - assets/tony.gif
+      - assets/dc.gif
+      - assets/marvel.gif
       - assets/river.gif
       - assets/everest.gif
       - assets/olimpiyat.webp

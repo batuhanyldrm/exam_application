@@ -48,12 +48,118 @@ class QuizPageState extends State<QuizPage> {
     {
       'categoryId': 1,
       'question':
-          '2. What character has both Robert Downey Jr. and Benedict Cumberbatch played?',
+          '1. Robert Downey Jr. ve Benedict Cumberbatch hangi karakteri canlandırmıştır?',
+      'image': 'assets/robertbenedict.jpg',
       'answers': [
         {'text': 'Dr. John Dolittle', 'score': 0},
         {'text': 'Tony Stark', 'score': 0},
         {'text': 'Doctor Strange', 'score': 0},
         {'text': 'Sherlock Holmes', 'score': 1},
+      ],
+    },
+    {
+      'categoryId': 1,
+      'question':
+          '2. Marvel ve DC karakterlerinin olduğu görselde kaç adet DC evrenine ait süper kahraman bulunuyor?',
+      'image': 'assets/character.webp',
+      'answers': [
+        {'text': '1', 'score': 0},
+        {'text': '2', 'score': 0},
+        {'text': '3', 'score': 0},
+        {'text': '4', 'score': 1},
+      ],
+    },
+    {
+      'categoryId': 1,
+      'question':
+          "3. Rocky'nin Rus rakibi Ivan Drago, serinin kaçıncı filminde Balboa'ya rakip olmuştu?",
+      'image': 'assets/rocky.webp',
+      'answers': [
+        {'text': 'Rocky (1976)', 'score': 0},
+        {'text': 'Rocky 2 (1979)', 'score': 0},
+        {'text': 'Rocky 3 (1982)', 'score': 0},
+        {'text': 'Rocky 4 (1985)', 'score': 1},
+      ],
+    },
+    {
+      'categoryId': 1,
+      'question':
+          "4. Brad Pitt yine kaslarını sergiliyor. Şahane filmlerinden hangisiydi?",
+      'image': 'assets/brad.gif',
+      'answers': [
+        {'text': 'Yedi / Seven (1995)', 'score': 0},
+        {'text': "Ocean's Eleven (2001)", 'score': 0},
+        {'text': 'Dövüş Kulübü / Fight Club (1999)', 'score': 0},
+        {'text': 'Snatch. / Kapışma (2000)', 'score': 1},
+      ],
+    },
+    {
+      'categoryId': 1,
+      'question': "5. Tyler Durden hangi film karakteridir?",
+      'image': 'assets/tylerDurden.gif',
+      'answers': [
+        {'text': 'Yedi / Seven (1995)', 'score': 0},
+        {'text': "Ocean's Eleven (2001)", 'score': 0},
+        {'text': 'Dövüş Kulübü / Fight Club (1999)', 'score': 1},
+        {'text': 'Snatch. / Kapışma (2000)', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 1,
+      'question':
+          "6. Aşağıdaki karakterlerden hangisi meşhur 'Avengers' filmlerinde oynamamıştır?",
+      'image': 'assets/marvel.gif',
+      'answers': [
+        {'text': 'Thor', 'score': 0},
+        {'text': 'Ant Man', 'score': 1},
+        {'text': 'Captain America', 'score': 0},
+        {'text': 'Hulk', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 1,
+      'question':
+          '7. 2013 yılında Yabancı Dilde En İyi Film dalında Oscar ödülü kazanan film hangisiydi?',
+      'image': 'assets/award.webp',
+      'answers': [
+        {'text': 'La grande bellezza', 'score': 1},
+        {'text': 'Amour', 'score': 0},
+        {'text': 'This Must Be the Place', 'score': 0},
+        {'text': 'Jagten', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 1,
+      'question': "8. Deadpool'un en büyük fobisi nedir?",
+      'image': 'assets/deadpool.gif',
+      'answers': [
+        {'text': 'Yükseklik', 'score': 0},
+        {'text': 'Palyaçolar', 'score': 0},
+        {'text': 'Kapalı yerde kalmak', 'score': 0},
+        {'text': 'İnekler', 'score': 1},
+      ],
+    },
+    {
+      'categoryId': 1,
+      'question': "9. Tony Stark daha önce hangisini yapmıştır?",
+      'image': 'assets/tony.gif',
+      'answers': [
+        {'text': 'Film Yönetmenliği', 'score': 0},
+        {'text': 'Dünya Sağlık Örgütü Başkanlığı', 'score': 0},
+        {'text': 'Savunma Bakanlığı', 'score': 1},
+        {'text': 'Hepsi', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 1,
+      'question':
+          "10. Hangi süper kahraman hiç justice leauge' de oynamamıştır?",
+      'image': 'assets/dc.gif',
+      'answers': [
+        {'text': 'Martian Manhunter', 'score': 0},
+        {'text': 'Constantine', 'score': 1},
+        {'text': 'Cyborg', 'score': 0},
+        {'text': 'Green Arrow', 'score': 0},
       ],
     },
     {
@@ -479,13 +585,105 @@ class QuizPageState extends State<QuizPage> {
     },
     {
       'categoryId': 7,
-      'question':
-          '8. Which of the following is not the 7 Wonders of the World?',
+      'question': '1. Suç ve Ceza’nın Raskolnikov’unun cinayet silahı nedir?',
       'answers': [
-        {'text': 'Temple of Artemis in Ephesus', 'score': 0},
-        {'text': 'Halicarnassus Mausoleum.', 'score': 0},
-        {'text': 'Fairy Chimneys(Kapadokya)', 'score': 1},
-        {'text': 'Pyramids', 'score': 0},
+        {'text': 'Tabanca', 'score': 0},
+        {'text': 'Ok', 'score': 0},
+        {'text': 'Bıçak', 'score': 0},
+        {'text': 'Balta', 'score': 1},
+      ],
+    },
+    {
+      'categoryId': 7,
+      'question':
+          "2. Stefan Zweig'ın Satranç romanında geçen, Buenos Aires'e doğru yola çıkan bir gemideki Dünya Satranç Şampiyonunun adı nedir?",
+      'answers': [
+        {'text': 'Czentovic', 'score': 1},
+        {'text': 'Çerdiyakov', 'score': 0},
+        {'text': 'Alex', 'score': 0},
+        {'text': 'Kaspersky', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 7,
+      'question': '3. Savaş ve Barış, hangi savaşı anlatır?',
+      'answers': [
+        {'text': 'Rus-Japon', 'score': 0},
+        {'text': 'Rus-Fransız', 'score': 1},
+        {'text': 'Rus-Türk', 'score': 0},
+        {'text': 'Rus-İsveç', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 7,
+      'question':
+          "4. 'Tek bir hayal peşinde çok fazla zaman geçirmenin bedelini ağır ödeyen' bir adamın hikâyesini anlatan F. Scott Fitzgerald'ın ünlü eserinin adı nedir?",
+      'answers': [
+        {'text': 'Yurttaş Kane', 'score': 0},
+        {'text': 'Çizmeli Kedi', 'score': 0},
+        {'text': 'Monte Kristo Kontu', 'score': 0},
+        {'text': 'Muhteşem Gatsby', 'score': 1},
+      ],
+    },
+    {
+      'categoryId': 7,
+      'question': "5. Rus edebiyatının hekim yazarı kimdir?",
+      'answers': [
+        {'text': 'Dostoyevski', 'score': 0},
+        {'text': 'Tolstoy', 'score': 0},
+        {'text': 'Gogol', 'score': 0},
+        {'text': 'Çehov', 'score': 1},
+      ],
+    },
+    {
+      'categoryId': 7,
+      'question':
+          "6. Dostoyevski' nin Ezilenler romanında hangi karakter yoktur?",
+      'answers': [
+        {'text': 'Nelli', 'score': 0},
+        {'text': 'Buck', 'score': 1},
+        {'text': 'Azorka', 'score': 0},
+        {'text': 'İhmenev', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 7,
+      'question': "7. Gogol’ün Ölü Canlar’ındaki canlar kimi temsil eder?",
+      'answers': [
+        {'text': 'Serfler', 'score': 1},
+        {'text': 'Köylüler', 'score': 0},
+        {'text': 'Aristokratlar', 'score': 0},
+        {'text': 'İnsanlar', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 7,
+      'question': "8. Hugo’nun ünlü kamburunun adı nedir?",
+      'answers': [
+        {'text': 'Rastignac', 'score': 0},
+        {'text': 'Gulliver', 'score': 0},
+        {'text': 'Quasimodo', 'score': 1},
+        {'text': 'Vautrin', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 7,
+      'question': "9. Hangi kitap karakteri intihar etmemiştir?",
+      'answers': [
+        {'text': 'Oliver Twist', 'score': 1},
+        {'text': 'Anna Karenina', 'score': 0},
+        {'text': 'Genç Werther', 'score': 0},
+        {'text': 'Madam Bovary', 'score': 0},
+      ],
+    },
+    {
+      'categoryId': 7,
+      'question': "10. Aşağıdaki Rus yazarlarından hangisi Batıcıdır?",
+      'answers': [
+        {'text': 'Dostoyevski', 'score': 0},
+        {'text': 'Turgenyev', 'score': 1},
+        {'text': 'Çernişevski', 'score': 0},
+        {'text': 'Puşkin', 'score': 0},
       ],
     },
     {
@@ -652,25 +850,33 @@ class QuizQuestionPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Quiz'),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          if (question.containsKey('image'))
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 10),
-              child: Image.asset(question['image'] as String),
-            ),
-          Question(
-            question['question'] as String,
+      body: Center(
+        // Wrap SingleChildScrollView with Center
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              if (question.containsKey('image'))
+                Container(
+                  margin:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                  constraints: const BoxConstraints(maxHeight: 300),
+                  child: Image.asset(question['image'] as String),
+                ),
+              Question(
+                question['question'] as String,
+              ),
+              ...(question['answers'] as List<Map<String, Object>>)
+                  .map((answer) {
+                return Answer(
+                  answer['text'] as String,
+                  () => answerQuestion(answer['score'] as int),
+                );
+              }).toList(),
+            ],
           ),
-          ...(question['answers'] as List<Map<String, Object>>).map((answer) {
-            return Answer(
-              answer['text'] as String,
-              () => answerQuestion(answer['score'] as int),
-            );
-          }).toList(),
-        ],
+        ),
       ),
     );
   }

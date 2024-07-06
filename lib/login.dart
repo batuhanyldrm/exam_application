@@ -17,6 +17,17 @@ class MyHomePage extends StatefulWidget {
 class MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    return const Scaffold(
+      body: Center(
+        child: Categories(),
+      ),
+    );
+  }
+}
+
+/* class MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Login'),
@@ -99,4 +110,4 @@ class MyHomePageState extends State<MyHomePage> {
       }
     }
   }
-}
+} */
