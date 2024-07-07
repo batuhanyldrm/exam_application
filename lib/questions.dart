@@ -4,7 +4,8 @@ class QuizPage extends StatefulWidget {
   final int categoryId;
   final VoidCallback resetQuiz;
 
-  QuizPage({required this.categoryId, required this.resetQuiz});
+  const QuizPage(
+      {super.key, required this.categoryId, required this.resetQuiz});
 
   @override
   QuizPageState createState() => QuizPageState();
@@ -839,7 +840,8 @@ class QuizQuestionPage extends StatelessWidget {
   final Map<String, Object> question;
   final Function(int) answerQuestion;
 
-  QuizQuestionPage({
+  const QuizQuestionPage({
+    super.key,
     required this.question,
     required this.answerQuestion,
   });
@@ -848,10 +850,9 @@ class QuizQuestionPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Quiz'),
+        title: const Text('Quiz'),
       ),
       body: Center(
-        // Wrap SingleChildScrollView with Center
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -873,7 +874,7 @@ class QuizQuestionPage extends StatelessWidget {
                   answer['text'] as String,
                   () => answerQuestion(answer['score'] as int),
                 );
-              }).toList(),
+              }),
             ],
           ),
         ),
@@ -885,7 +886,7 @@ class QuizQuestionPage extends StatelessWidget {
 class Question extends StatelessWidget {
   final String questionText;
 
-  Question(this.questionText);
+  const Question(this.questionText, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -904,7 +905,7 @@ class Answer extends StatelessWidget {
   final String answerText;
   final Function onPress;
 
-  Answer(this.answerText, this.onPress);
+  const Answer(this.answerText, this.onPress, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -915,9 +916,9 @@ class Answer extends StatelessWidget {
         child: OutlinedButton(
           style: OutlinedButton.styleFrom(
             shape: const StadiumBorder(),
-            side: BorderSide(
+            side: const BorderSide(
               width: 2,
-              color: Theme.of(context).colorScheme.primary,
+              color: Colors.pink,
             ),
           ),
           child: Text(answerText),
@@ -935,7 +936,8 @@ class ResultPage extends StatelessWidget {
   final int score;
   final VoidCallback resetQuiz;
 
-  ResultPage({
+  const ResultPage({
+    super.key,
     required this.questions,
     required this.score,
     required this.resetQuiz,
@@ -970,6 +972,9 @@ class ResultPage extends StatelessWidget {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: resetQuiz,
+              style: ElevatedButton.styleFrom(
+                foregroundColor: Colors.white,
+              ),
               child: const Text('Reset quiz'),
             ),
           ],

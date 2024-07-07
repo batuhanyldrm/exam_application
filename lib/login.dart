@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_application_final_project/categories.dart';
-import 'package:mobile_application_final_project/error.dart';
+/* import 'package:mobile_application_final_project/error.dart'; */
 
+// ignore: must_be_immutable
 class MyHomePage extends StatefulWidget {
   final formKey = GlobalKey<FormState>();
   late String email, password;
 
   final String title;
 
-  MyHomePage({Key? key, required this.title}) : super(key: key);
+  MyHomePage({super.key, required this.title});
 
   @override
   MyHomePageState createState() => MyHomePageState();
