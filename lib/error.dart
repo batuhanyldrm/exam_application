@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Error extends StatefulWidget {
-  const Error({Key? key}) : super(key: key);
+  const Error({super.key});
 
   @override
   State createState() => ErrorState();
@@ -19,13 +19,13 @@ class ErrorState extends State<Error> {
           Container(
             width: 100,
             height: 100,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage("assets/unsuccessful.png"),
               ),
             ),
           ),
-          Center(
+          const Center(
             child: Text(
               "Wrong e-mail or password please try again",
               style: TextStyle(fontSize: 20),
@@ -35,7 +35,7 @@ class ErrorState extends State<Error> {
             padding: const EdgeInsets.only(top: 20),
             child: ElevatedButton(
               style: ButtonStyle(
-                  fixedSize: MaterialStateProperty.all(const Size(120, 30))),
+                  fixedSize: WidgetStateProperty.all(const Size(120, 30))),
               onPressed: () => Navigator.pop(context),
               child: const Text('Go back!'),
             ),

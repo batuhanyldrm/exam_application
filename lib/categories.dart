@@ -98,7 +98,8 @@ class CategoriesPage extends StatelessWidget {
   final List<Map<String, Object>> categories;
   final Function(int) selectCategory;
 
-  CategoriesPage({required this.categories, required this.selectCategory});
+  const CategoriesPage(
+      {super.key, required this.categories, required this.selectCategory});
 
   @override
   Widget build(BuildContext context) {
@@ -132,7 +133,7 @@ class Category extends StatelessWidget {
   final String imageUrl;
   final Function onPress;
 
-  Category(this.categoryText, this.imageUrl, this.onPress);
+  const Category(this.categoryText, this.imageUrl, this.onPress, {super.key});
 
   @override
   Widget build(BuildContext context) {
